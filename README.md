@@ -108,6 +108,18 @@ cp .env.example .env
   pip install pyautogui
   ```
 
+## Running the Assistant 🎤
+Once the environment is set up and dependencies are installed, run your assistant with:
+```bash
+python assistant_script.py
+```
+The assistant will begin listening for commands, such as:
+- "Open YouTube"
+- "Close Android Studio"
+- "Play music"
+- "Talk with Gemini"
+  
+
 ## 🌟 File Structure 📂
 ```bash
 windows-ai-assistant/
