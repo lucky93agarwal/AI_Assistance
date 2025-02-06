@@ -119,6 +119,55 @@ The assistant will begin listening for commands, such as:
 - "Play music"
 - "Talk with Gemini"
   
+## Command List 📜
+
+### **System Operations:**
+- "Open [Application Name]" (e.g., "Open Notepad")
+- "Close [Application Name]" (e.g., "Close YouTube")
+
+### **Web Automation:**
+- "Open [Website Name]" (e.g., "Open Google")
+- "Search [Query]" (e.g., "Search Python tutorials")
+
+### **Music Control:**
+- "Play music"
+- "Pause music"
+- "Stop music"
+
+### **Screenshots:**
+- "Take a screenshot"
+- "Show screenshot"
+
+### **AI Interaction:**
+- "Talk with Gemini"
+- "Ask Gemini about [topic]"
+
+## 🌟 Troubleshooting 🛠️
+
+### **Python Version Check**
+To verify if Python is installed:
+```bash
+python --version
+# or
+python3 --version
+```
+
+### **Setting Up Virtual Environment**
+
+- Install Virtual Environment:
+```bash
+pip install virtualenv
+```
+
+- Activate the Virtual Environment:
+```bash
+venv\Scripts\activate
+```
+
+- Install Dependencies:
+```bash
+pip install -r requirements.txt
+```
 
 ## 🌟 File Structure 📂
 ```bash
