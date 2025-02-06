@@ -69,7 +69,44 @@ pip install -r requirements.txt
 # Set up environment variables
 cp .env.example .env
 ```
-## Configuration 🔧
+
+
+## Required Libraries 📚
+
+### **Virtual Environment:**
+- To manage project dependencies, create a virtual environment with the following command:
+  ```bash
+  python -m venv venv
+  ```
+- Then activate it:
+  ```bash
+  venv\Scripts\activate
+  ```
+### **Install Dependencies:**
+- Audio Handling:
+  ```bash
+  pip install pyaudio
+  ```
+- Speech Recognition:
+  ```bash
+  pip install SpeechRecognition
+  ```
+- Text-to-Speech (TTS):
+  ```bash
+  pip install pyttsx3
+  ```
+- Google Gemini API:
+  ```bash
+  pip install google-generativeai
+  ```
+- Joke Functionality:
+  ```bash
+  pip install pyjokes
+  ```
+- Screenshot Capture (pyautogui):
+  ```bash
+  pip install pyautogui
+  ```
 
 ## 🌟 File Structure 📂
 ```bash
