@@ -183,3 +183,7 @@ windows-ai-assistant/
 ├── requirements.txt       # Dependency list
 └── .env                   # Environment variables
 ```
+
+## Visitors Count
+
+<img align="left" src = "https://profile-counter.glitch.me/local_notifications/AI_Assistance.svg" alt ="Loading">
