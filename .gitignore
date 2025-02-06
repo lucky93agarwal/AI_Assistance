@@ -16,5 +16,6 @@ Thumbs.db
 
 # Ignore logs and temporary files
 logs/
+Gemini/
 *.log
 *.tmp

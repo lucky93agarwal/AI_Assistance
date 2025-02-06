@@ -6,10 +6,16 @@ import subprocess  # todo: For running Android Studio
 import webbrowser
 import pyautogui
 import datetime
+import google.generativeai as genai
+import re
 from config import apiKey
 from constants import * 
 
 print(apiKey)
+
+# Configure API Key
+genai.configure(api_key=apiKey)
+
 # Initialize recognizer
 recognizer = sr.Recognizer()
 
@@ -21,7 +27,40 @@ def say(text):
     engine.runAndWait()
     
 
+# Function to generate a valid filename from a question
+def generate_filename(question):
+    # Remove special characters and spaces, then convert to lowercase
+    filename = re.sub(r'[^a-zA-Z0-9]+', '_', question).lower()  
+    filename = filename.strip('_')  # Remove leading/trailing underscores
+    return filename
 
+def ask_gemini(question):
+    try:
+        # Initialize the Gemini model
+        model = genai.GenerativeModel("gemini-pro")
+        
+        # Generate response
+        response = model.generate_content(question)
+
+        # Get response text
+        answer = response.text
+
+        # Generate a unique filename with date and time
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") 
+        # Generate a valid filename based on the question
+        filename = f"{generate_filename(question)}_{timestamp}.txt"
+
+
+        # Define the file path inside the Gemini folder
+        file_path = os.path.join(gemini_folder, filename)
+
+        # Save the answer to the file
+        with open(file_path, "w", encoding="utf-8") as file:
+            file.write(answer)
+
+        print(f"✅ Answer saved to: {file_path}")
+    except Exception as e:
+        print(f"❌ Error: {e}")
 
 def takeCommand():
     # Use the microphone as source
@@ -166,7 +205,14 @@ while True:
     
     if "take screenshot".lower() in query.lower() or "take a screenshot".lower():
         take_screenshot()
-
+        
+        
+    if "hey gemini tell me".lower() in query.lower():
+        say("Sure! Ask your question.")
+        if query:
+            ask_gemini(question = query)
+        else:
+            say("Sorry, I couldn't hear your question.")
     else:
         continue
 

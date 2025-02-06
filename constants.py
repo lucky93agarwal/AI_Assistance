@@ -18,5 +18,6 @@ ANDROID_STUDIO_IS_NOT_RUNNING = f"Android Studio is not running or couldn't be f
 ANDROID_STUDIO_HAS_BEEN_CLOSED = f"Android Studio has been closed."
 ANDROID_STUDIO_IS_CLOSED = f"Android Studio is closed."
 ANDROID_STUDIO_IS_OPENING = f"Android Studio is opening..."
+gemini_folder = "Gemini"
 
 
