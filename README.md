@@ -186,4 +186,4 @@ windows-ai-assistant/
 
 ## Visitors Count
 
-<img align="left" src = "https://profile-counter.glitch.me/local_notifications/AI_Assistance.svg" alt ="Loading">
+<img align="left" src = "https://profile-counter.glitch.me/AI_Assistance/count.svg" alt ="Loading">
