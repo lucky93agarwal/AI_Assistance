@@ -1,0 +1,87 @@
+# Astra - Windows Desktop AI Assistant 🤖
+
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://python.org)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2B-lightgrey)](https://www.microsoft.com/windows)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+A voice-activated AI assistant for Windows that performs system operations, web navigation, and intelligent interactions using Gemini AI.
+
+## 🌟 Features Overview
+
+### **Application Control**
+- Open/Close Windows Applications
+- Launch Developer Tools (Android Studio)
+- Manage Music Playback
+- System Command Execution
+
+### **System Operations**
+- Launch/Close Windows Applications (Notepad, Calculator, etc.)
+- Terminate Android Studio processes
+- Manage Assistant listening state
+- System resource monitoring
+
+### **Web Automation**
+- Open Websites: 
+  `YouTube, Instagram, Google, Wikipedia, ChatGPT, Codelist`
+- Smart Search Integration
+- Custom Web Shortcuts
+
+### **AI Capabilities**
+- Gemini AI Integration 🧠
+- Natural Language Processing (NLP)
+- Voice Command Recognition
+- Contextual Conversations
+
+### **Core Functionality**
+- Background Listening Mode 🎤
+- Voice Activation/Deactivation
+- Cross-Platform Control
+- Custom Command Configuration
+
+### **Media & Utilities**
+- Music playback control 🎤
+- Screenshot capture (Downloads/ directory)
+- Voice-controlled screenshot management
+- Joke telling functionality
+
+## 🚀 Installation
+
+### **Prerequisites**
+- Python 3.8+
+- Windows 10/11
+- Microphone (Recommended)
+- Windows 10/11 (64-bit)
+- Administrative privileges (for system operations)
+- Google account (for Gemini API)
+
+```bash
+# Clone repository
+git clone https://github.com/yourusername/windows-ai-assistant.git
+cd windows-ai-assistant
+
+# Create virtual environment
+python -m venv venv
+venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up environment variables
+cp .env.example .env
+```
+## Configuration 🔧
+
+## 🌟 File Structure 📂
+```bash
+windows-ai-assistant/
+├── src/
+│   ├── main.py            # Main application entry
+│   ├── speech_engine.py   # Speech recognition/TTS
+│   ├── ai_handler.py      # Gemini integration
+│   └── system_utils.py    # OS operations
+├── config/
+│   ├── app_paths.json     # Application shortcuts
+│   └── commands.json      # Voice command mappings
+├── requirements.txt       # Dependency list
+└── .env                   # Environment variables
+```
